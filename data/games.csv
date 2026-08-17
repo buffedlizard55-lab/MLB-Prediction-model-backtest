@@ -1122,6 +1122,145 @@ game_pk,season,official_date,game_date,game_type,away_team_id,away_team,away_sco
 746539,2024,2024-06-20,2024-06-20,R,119,Los Angeles Dodgers,5,115,Colorado Rockies,3,0,8,-2
 746626,2024,2024-06-20,2024-06-20,R,136,Seattle Mariners,3,114,Cleveland Guardians,6,1,9,3
 746782,2024,2024-06-20,2024-06-20,R,117,Houston Astros,5,145,Chicago White Sox,3,0,8,-2
+745006,2024,2024-06-21,2024-06-21,R,118,Kansas City Royals,2,140,Texas Rangers,6,1,8,4
+745403,2024,2024-06-21,2024-06-21,R,158,Milwaukee Brewers,5,135,San Diego Padres,9,1,14,4
+745483,2024,2024-06-21,2024-06-21,R,139,Tampa Bay Rays,10,134,Pittsburgh Pirates,3,0,13,-7
+745562,2024,2024-06-21,2024-06-21,R,109,Arizona Diamondbacks,5,143,Philadelphia Phillies,4,0,9,-1
+745649,2024,2024-06-21,2024-06-21,R,142,Minnesota Twins,5,133,Athletics,6,1,11,1
+745729,2024,2024-06-21,2024-06-21,R,144,Atlanta Braves,8,147,New York Yankees,1,0,9,-7
+746052,2024,2024-06-21,2024-06-21,R,136,Seattle Mariners,2,146,Miami Marlins,3,1,5,1
+746131,2024,2024-06-21,2024-06-21,R,108,Los Angeles Angels,3,119,Los Angeles Dodgers,2,0,5,-1
+746375,2024,2024-06-21,2024-06-21,R,110,Baltimore Orioles,11,117,Houston Astros,14,1,25,3
+746460,2024,2024-06-21,2024-06-21,R,145,Chicago White Sox,1,116,Detroit Tigers,2,1,3,1
+746540,2024,2024-06-21,2024-06-21,R,120,Washington Nationals,11,115,Colorado Rockies,5,0,16,-6
+746624,2024,2024-06-21,2024-06-21,R,141,Toronto Blue Jays,1,114,Cleveland Guardians,7,1,8,6
+746698,2024,2024-06-21,2024-06-21,R,111,Boston Red Sox,2,113,Cincinnati Reds,5,1,7,3
+746861,2024,2024-06-21,2024-06-21,R,121,New York Mets,11,112,Chicago Cubs,1,0,12,-10
+744997,2024,2024-06-22,2024-06-22,R,118,Kansas City Royals,0,140,Texas Rangers,6,1,6,6
+745163,2024,2024-06-22,2024-06-22,R,137,San Francisco Giants,4,138,St. Louis Cardinals,9,1,13,5
+745402,2024,2024-06-22,2024-06-22,R,158,Milwaukee Brewers,4,135,San Diego Padres,6,1,10,2
+745486,2024,2024-06-22,2024-06-22,R,139,Tampa Bay Rays,3,134,Pittsburgh Pirates,4,1,7,1
+745564,2024,2024-06-22,2024-06-22,R,109,Arizona Diamondbacks,1,143,Philadelphia Phillies,12,1,13,11
+745644,2024,2024-06-22,2024-06-22,R,142,Minnesota Twins,10,133,Athletics,2,0,12,-8
+745731,2024,2024-06-22,2024-06-22,R,144,Atlanta Braves,3,147,New York Yankees,8,1,11,5
+746048,2024,2024-06-22,2024-06-22,R,136,Seattle Mariners,9,146,Miami Marlins,0,0,9,-9
+746132,2024,2024-06-22,2024-06-22,R,108,Los Angeles Angels,2,119,Los Angeles Dodgers,7,1,9,5
+746376,2024,2024-06-22,2024-06-22,R,110,Baltimore Orioles,1,117,Houston Astros,5,1,6,4
+746459,2024,2024-06-22,2024-06-22,R,145,Chicago White Sox,5,116,Detroit Tigers,1,0,6,-4
+746541,2024,2024-06-22,2024-06-22,R,120,Washington Nationals,7,115,Colorado Rockies,8,1,15,1
+746622,2024,2024-06-22,2024-06-22,R,141,Toronto Blue Jays,3,114,Cleveland Guardians,6,1,9,3
+746700,2024,2024-06-22,2024-06-22,R,111,Boston Red Sox,4,113,Cincinnati Reds,3,0,7,-1
+746863,2024,2024-06-22,2024-06-22,R,121,New York Mets,1,112,Chicago Cubs,8,1,9,7
+745000,2024,2024-06-23,2024-06-23,R,118,Kansas City Royals,0,140,Texas Rangers,4,1,4,4
+745165,2024,2024-06-23,2024-06-23,R,137,San Francisco Giants,3,138,St. Louis Cardinals,5,1,8,2
+745396,2024,2024-06-23,2024-06-23,R,158,Milwaukee Brewers,6,135,San Diego Padres,2,0,8,-4
+745485,2024,2024-06-23,2024-06-23,R,139,Tampa Bay Rays,3,134,Pittsburgh Pirates,1,0,4,-2
+745566,2024,2024-06-23,2024-06-23,R,109,Arizona Diamondbacks,1,143,Philadelphia Phillies,4,1,5,3
+745648,2024,2024-06-23,2024-06-23,R,142,Minnesota Twins,3,133,Athletics,0,0,3,-3
+745727,2024,2024-06-23,2024-06-23,R,144,Atlanta Braves,3,147,New York Yankees,1,0,4,-2
+746051,2024,2024-06-23,2024-06-23,R,136,Seattle Mariners,4,146,Miami Marlins,6,1,10,2
+746373,2024,2024-06-23,2024-06-23,R,110,Baltimore Orioles,1,117,Houston Astros,8,1,9,7
+746457,2024,2024-06-23,2024-06-23,R,145,Chicago White Sox,2,116,Detroit Tigers,11,1,13,9
+746536,2024,2024-06-23,2024-06-23,R,120,Washington Nationals,2,115,Colorado Rockies,1,0,3,-1
+746621,2024,2024-06-23,2024-06-23,R,141,Toronto Blue Jays,5,114,Cleveland Guardians,6,1,11,1
+746699,2024,2024-06-23,2024-06-23,R,111,Boston Red Sox,7,113,Cincinnati Reds,4,0,11,-3
+746862,2024,2024-06-23,2024-06-23,R,121,New York Mets,5,112,Chicago Cubs,2,0,7,-3
+745078,2024,2024-06-24,2024-06-24,R,136,Seattle Mariners,3,139,Tampa Bay Rays,4,1,7,1
+745160,2024,2024-06-24,2024-06-24,R,144,Atlanta Braves,3,138,St. Louis Cardinals,4,1,7,1
+745323,2024,2024-06-24,2024-06-24,R,112,Chicago Cubs,4,137,San Francisco Giants,5,1,9,1
+745397,2024,2024-06-24,2024-06-24,R,120,Washington Nationals,6,135,San Diego Padres,7,1,13,1
+745974,2024,2024-06-24,2024-06-24,R,140,Texas Rangers,3,158,Milwaukee Brewers,6,1,9,3
+746218,2024,2024-06-24,2024-06-24,R,133,Athletics,1,108,Los Angeles Angels,5,1,6,4
+746298,2024,2024-06-24,2024-06-24,R,146,Miami Marlins,1,118,Kansas City Royals,4,1,5,3
+746458,2024,2024-06-24,2024-06-24,R,143,Philadelphia Phillies,8,116,Detroit Tigers,1,0,9,-7
+746696,2024,2024-06-24,2024-06-24,R,134,Pittsburgh Pirates,5,113,Cincinnati Reds,11,1,16,6
+746780,2024,2024-06-24,2024-06-24,R,119,Los Angeles Dodgers,3,145,Chicago White Sox,0,0,3,-3
+746941,2024,2024-06-24,2024-06-24,R,141,Toronto Blue Jays,6,111,Boston Red Sox,7,1,13,1
+747021,2024,2024-06-24,2024-06-24,R,114,Cleveland Guardians,3,110,Baltimore Orioles,2,0,5,-1
+745076,2024,2024-06-25,2024-06-25,R,136,Seattle Mariners,3,139,Tampa Bay Rays,11,1,14,8
+745322,2024,2024-06-25,2024-06-25,R,112,Chicago Cubs,1,137,San Francisco Giants,5,1,6,4
+745399,2024,2024-06-25,2024-06-25,R,120,Washington Nationals,7,135,San Diego Padres,9,1,16,2
+745806,2024,2024-06-25,2024-06-25,R,147,New York Yankees,7,121,New York Mets,9,1,16,2
+745973,2024,2024-06-25,2024-06-25,R,140,Texas Rangers,1,158,Milwaukee Brewers,3,1,4,2
+746213,2024,2024-06-25,2024-06-25,R,133,Athletics,5,108,Los Angeles Angels,7,1,12,2
+746293,2024,2024-06-25,2024-06-25,R,146,Miami Marlins,2,118,Kansas City Royals,1,0,3,-1
+746372,2024,2024-06-25,2024-06-25,R,115,Colorado Rockies,2,117,Houston Astros,5,1,7,3
+746454,2024,2024-06-25,2024-06-25,R,143,Philadelphia Phillies,1,116,Detroit Tigers,4,1,5,3
+746697,2024,2024-06-25,2024-06-25,R,134,Pittsburgh Pirates,9,113,Cincinnati Reds,5,0,14,-4
+746775,2024,2024-06-25,2024-06-25,R,119,Los Angeles Dodgers,4,145,Chicago White Sox,3,0,7,-1
+746943,2024,2024-06-25,2024-06-25,R,141,Toronto Blue Jays,9,111,Boston Red Sox,4,0,13,-5
+747022,2024,2024-06-25,2024-06-25,R,114,Cleveland Guardians,10,110,Baltimore Orioles,8,0,18,-2
+747188,2024,2024-06-25,2024-06-25,R,142,Minnesota Twins,4,109,Arizona Diamondbacks,5,1,9,1
+745073,2024,2024-06-26,2024-06-26,R,136,Seattle Mariners,5,139,Tampa Bay Rays,2,0,7,-3
+745157,2024,2024-06-26,2024-06-26,R,144,Atlanta Braves,6,138,St. Louis Cardinals,2,0,8,-4
+745158,2024,2024-06-26,2024-06-26,R,144,Atlanta Braves,1,138,St. Louis Cardinals,4,1,5,3
+745325,2024,2024-06-26,2024-06-26,R,112,Chicago Cubs,3,137,San Francisco Giants,4,1,7,1
+745400,2024,2024-06-26,2024-06-26,R,120,Washington Nationals,5,135,San Diego Padres,8,1,13,3
+745808,2024,2024-06-26,2024-06-26,R,147,New York Yankees,2,121,New York Mets,12,1,14,10
+745975,2024,2024-06-26,2024-06-26,R,140,Texas Rangers,5,158,Milwaukee Brewers,6,1,11,1
+746212,2024,2024-06-26,2024-06-26,R,133,Athletics,2,108,Los Angeles Angels,5,1,7,3
+746291,2024,2024-06-26,2024-06-26,R,146,Miami Marlins,1,118,Kansas City Royals,5,1,6,4
+746374,2024,2024-06-26,2024-06-26,R,115,Colorado Rockies,1,117,Houston Astros,7,1,8,6
+746456,2024,2024-06-26,2024-06-26,R,143,Philadelphia Phillies,6,116,Detroit Tigers,2,0,8,-4
+746695,2024,2024-06-26,2024-06-26,R,134,Pittsburgh Pirates,6,113,Cincinnati Reds,1,0,7,-5
+746777,2024,2024-06-26,2024-06-26,R,119,Los Angeles Dodgers,4,145,Chicago White Sox,0,0,4,-4
+746942,2024,2024-06-26,2024-06-26,R,141,Toronto Blue Jays,4,111,Boston Red Sox,1,0,5,-3
+747019,2024,2024-06-26,2024-06-26,R,114,Cleveland Guardians,2,110,Baltimore Orioles,4,1,6,2
+747184,2024,2024-06-26,2024-06-26,R,142,Minnesota Twins,8,109,Arizona Diamondbacks,3,0,11,-5
+744919,2024,2024-06-27,2024-06-27,R,147,New York Yankees,2,141,Toronto Blue Jays,9,1,11,7
+745162,2024,2024-06-27,2024-06-27,R,113,Cincinnati Reds,11,138,St. Louis Cardinals,4,0,15,-7
+745324,2024,2024-06-27,2024-06-27,R,112,Chicago Cubs,5,137,San Francisco Giants,3,0,8,-2
+745565,2024,2024-06-27,2024-06-27,R,146,Miami Marlins,7,143,Philadelphia Phillies,4,0,11,-3
+746210,2024,2024-06-27,2024-06-27,R,116,Detroit Tigers,0,108,Los Angeles Angels,5,1,5,5
+746288,2024,2024-06-27,2024-06-27,R,114,Cleveland Guardians,1,118,Kansas City Royals,2,1,3,1
+746816,2024,2024-06-27,2024-06-27,R,144,Atlanta Braves,0,145,Chicago White Sox,1,1,1,1
+747020,2024,2024-06-27,2024-06-27,R,140,Texas Rangers,2,110,Baltimore Orioles,11,1,13,9
+747185,2024,2024-06-27,2024-06-27,R,142,Minnesota Twins,13,109,Arizona Diamondbacks,6,0,19,-7
+744922,2024,2024-06-28,2024-06-28,R,147,New York Yankees,16,141,Toronto Blue Jays,5,0,21,-11
+745070,2024,2024-06-28,2024-06-28,R,120,Washington Nationals,1,139,Tampa Bay Rays,3,1,4,2
+745161,2024,2024-06-28,2024-06-28,R,113,Cincinnati Reds,0,138,St. Louis Cardinals,1,1,1,1
+745238,2024,2024-06-28,2024-06-28,R,142,Minnesota Twins,2,136,Seattle Mariners,3,1,5,1
+745319,2024,2024-06-28,2024-06-28,R,119,Los Angeles Dodgers,3,137,San Francisco Giants,5,1,8,2
+745560,2024,2024-06-28,2024-06-28,R,146,Miami Marlins,0,143,Philadelphia Phillies,2,1,2,2
+745804,2024,2024-06-28,2024-06-28,R,117,Houston Astros,2,121,New York Mets,7,1,9,5
+745970,2024,2024-06-28,2024-06-28,R,112,Chicago Cubs,2,158,Milwaukee Brewers,4,1,6,2
+746214,2024,2024-06-28,2024-06-28,R,116,Detroit Tigers,2,108,Los Angeles Angels,5,1,7,3
+746292,2024,2024-06-28,2024-06-28,R,114,Cleveland Guardians,3,118,Kansas City Royals,10,1,13,7
+746776,2024,2024-06-28,2024-06-28,R,115,Colorado Rockies,3,145,Chicago White Sox,5,1,8,2
+746939,2024,2024-06-28,2024-06-28,R,135,San Diego Padres,9,111,Boston Red Sox,2,0,11,-7
+747017,2024,2024-06-28,2024-06-28,R,140,Texas Rangers,1,110,Baltimore Orioles,2,1,3,1
+747105,2024,2024-06-28,2024-06-28,R,134,Pittsburgh Pirates,1,144,Atlanta Braves,6,1,7,5
+747183,2024,2024-06-28,2024-06-28,R,133,Athletics,9,109,Arizona Diamondbacks,4,0,13,-5
+744921,2024,2024-06-29,2024-06-29,R,147,New York Yankees,3,141,Toronto Blue Jays,9,1,12,6
+745071,2024,2024-06-29,2024-06-29,R,120,Washington Nationals,8,139,Tampa Bay Rays,1,0,9,-7
+745159,2024,2024-06-29,2024-06-29,R,113,Cincinnati Reds,9,138,St. Louis Cardinals,4,0,13,-5
+745239,2024,2024-06-29,2024-06-29,R,142,Minnesota Twins,5,136,Seattle Mariners,1,0,6,-4
+745317,2024,2024-06-29,2024-06-29,R,119,Los Angeles Dodgers,14,137,San Francisco Giants,7,0,21,-7
+745559,2024,2024-06-29,2024-06-29,R,146,Miami Marlins,3,143,Philadelphia Phillies,2,0,5,-1
+745801,2024,2024-06-29,2024-06-29,R,117,Houston Astros,9,121,New York Mets,6,0,15,-3
+745972,2024,2024-06-29,2024-06-29,R,112,Chicago Cubs,5,158,Milwaukee Brewers,3,0,8,-2
+746211,2024,2024-06-29,2024-06-29,R,116,Detroit Tigers,5,108,Los Angeles Angels,6,1,11,1
+746289,2024,2024-06-29,2024-06-29,R,114,Cleveland Guardians,7,118,Kansas City Royals,2,0,9,-5
+746778,2024,2024-06-29,2024-06-29,R,115,Colorado Rockies,3,145,Chicago White Sox,11,1,14,8
+746940,2024,2024-06-29,2024-06-29,R,135,San Diego Padres,11,111,Boston Red Sox,1,0,12,-10
+747018,2024,2024-06-29,2024-06-29,R,140,Texas Rangers,5,110,Baltimore Orioles,6,1,11,1
+747104,2024,2024-06-29,2024-06-29,R,134,Pittsburgh Pirates,1,144,Atlanta Braves,2,1,3,1
+747186,2024,2024-06-29,2024-06-29,R,133,Athletics,0,109,Arizona Diamondbacks,3,1,3,3
+744916,2024,2024-06-30,2024-06-30,R,147,New York Yankees,8,141,Toronto Blue Jays,1,0,9,-7
+745072,2024,2024-06-30,2024-06-30,R,120,Washington Nationals,0,139,Tampa Bay Rays,5,1,5,5
+745154,2024,2024-06-30,2024-06-30,R,113,Cincinnati Reds,0,138,St. Louis Cardinals,2,1,2,2
+745243,2024,2024-06-30,2024-06-30,R,142,Minnesota Twins,5,136,Seattle Mariners,3,0,8,-2
+745320,2024,2024-06-30,2024-06-30,R,119,Los Angeles Dodgers,4,137,San Francisco Giants,10,1,14,6
+745555,2024,2024-06-30,2024-06-30,R,146,Miami Marlins,6,143,Philadelphia Phillies,7,1,13,1
+745802,2024,2024-06-30,2024-06-30,R,117,Houston Astros,10,121,New York Mets,5,0,15,-5
+745971,2024,2024-06-30,2024-06-30,R,112,Chicago Cubs,1,158,Milwaukee Brewers,7,1,8,6
+746209,2024,2024-06-30,2024-06-30,R,116,Detroit Tigers,7,108,Los Angeles Angels,6,0,13,-1
+746290,2024,2024-06-30,2024-06-30,R,114,Cleveland Guardians,2,118,Kansas City Royals,6,1,8,4
+746779,2024,2024-06-30,2024-06-30,R,115,Colorado Rockies,5,145,Chicago White Sox,4,0,9,-1
+746938,2024,2024-06-30,2024-06-30,R,135,San Diego Padres,1,111,Boston Red Sox,4,1,5,3
+747016,2024,2024-06-30,2024-06-30,R,140,Texas Rangers,11,110,Baltimore Orioles,2,0,13,-9
+747101,2024,2024-06-30,2024-06-30,R,134,Pittsburgh Pirates,4,144,Atlanta Braves,2,0,6,-2
+747182,2024,2024-06-30,2024-06-30,R,133,Athletics,1,109,Arizona Diamondbacks,5,1,6,4
 778563,2025,2025-03-18,2025-03-18,R,119,Los Angeles Dodgers,4,112,Chicago Cubs,1,0,5,-3
 778564,2025,2025-03-19,2025-03-19,R,119,Los Angeles Dodgers,6,112,Chicago Cubs,3,0,9,-3
 778545,2025,2025-03-27,2025-03-27,R,144,Atlanta Braves,4,135,San Diego Padres,7,1,11,3
