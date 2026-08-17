@@ -9,3 +9,9 @@ retrieved_utc,source_url,rows
 2026-08-17T08:13:36.994870+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-16&endDate=2025-04-25&gameTypes=R (chunk 3),25
 2026-08-17T08:14:22.625598+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-16&endDate=2025-04-25&gameTypes=R (chunk 4),24
 2026-08-17T08:14:42.842125+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-16&endDate=2025-04-25&gameTypes=R (chunk 5),7
+2026-08-17T08:16:42.455730+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 0),24
+2026-08-17T08:17:10.300629+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 1),24
+2026-08-17T08:17:49.165038+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 2),24
+2026-08-17T08:18:22.158593+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 3),25
+2026-08-17T08:19:04.392814+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 4),24
+2026-08-17T08:19:41.987511+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-04-26&endDate=2025-05-05&gameTypes=R (chunk 5),14
