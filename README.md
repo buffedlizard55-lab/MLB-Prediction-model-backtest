@@ -128,10 +128,10 @@ average breakeven price.
 
 ## Latest results — 2025 full regular season (walk-forward, no lookahead)
 
-Dataset: **5,659 verified official games** — the **complete 2024 season
+Dataset: **6,187 verified official games** — the **complete 2024 season
 (2,429 games; HOU and CLE at 161 because the Sep 29 game was rained out and
-never made up), the complete 2025 season (2,430 games), plus the first 800
-games of 2023 (Mar 28 – May 28 span, all 30 teams, 51–55 games each)**,
+never made up), the complete 2025 season (2,430 games), plus the first
+1,328 games of 2023 (Mar 30 – Jul 7, all 30 teams, 87–91 games each)**,
 transcribed 1:1 from `statsapi.mlb.com` schedule responses with a
 provenance manifest. Every team's game total was audited against the
 official per-team schedule endpoints. Backtest evaluates **2,430
@@ -163,13 +163,16 @@ Training-history ablation, all on the same 2,430 out-of-sample games:
 | 2025 season only (rolling) | 54.0% | 57.8% |
 | + 2024 first half | 55.5% | 61.4% |
 | + full 2024 season | 56.1% | 66.4% (n=455) |
-| + 2023 Apr–May (800 games, 2026-08-17) | 55.9% | 67.4% (n=347) |
+| + 2023 Apr–May (800 games) | 55.9% | 67.4% (n=347) |
+| + 2023 through Jul 7 (1,328 games) | 55.4% | 64.6% (n=359) — now *trailing* the season-win% baseline (56.1%) overall |
 
 **Second out-of-sample season (2026-08-17, enabled by the 2023 ingest):**
 backtesting 2024 (trained on the 2023 partial only — much thinner history)
-gives model acc 54.8% vs always-home 52.2%, and selective ≥0.10 = 63.9%
-on 280 games (below its own breakeven at ≥0.06: 57.2% vs ~59.8% needed).
-The selective edge does not replicate at face value across seasons.
+gives model acc 54.8% vs always-home 52.2%. The selective ≥0.10 subset
+swings from 63.9% (n=280, 800-game training) to 58.3% (n=266, 1,328-game
+training) — a ±6pp move from training depth alone, far outside any
+plausible edge margin, and below its own breakeven under either depth.
+The selective metric is not season-stable.
 
 **Baseline equivalence (2026-08-17):** the leak-free rolling win-%
 favourite baseline (home tiebreak, shrunk to .500) *exactly* matches the
@@ -196,9 +199,10 @@ below) and an odds feed so ROI/CLV replaces breakeven accounting.
 4. ✅ 2024 first-half ingest → multi-year train history (lifted selective ≥0.10 to 61.4%)
 5. ✅ Full 2024 season ingest (2,429 games, audited per-team vs official schedules) →
    full two-year history backtest: 56.1% overall, **66.4%** on the ≥0.10-edge subset
-5b. 🔶 2023 ingest started (800 games, Mar 30 – May 28, page-captured +
+5b. 🔶 2023 ingest at 1,328 games (Mar 30 – Jul 7, page-captured +
    validated); enabled the first second-season backtest (2024). Remaining
-   2023 windows (Jun – Oct 1) resume with the same one-command processor;
+   2023 windows (Jul 8 – Oct 1, ~9 captures) resume with the same
+   one-command processor;
    2016–2022 + full 2023 via the CI workflow once `scripts/
    collect-upstream-data.workflow.yml` is copied to `.github/workflows/`
 6. 🔶 Statcast pitcher quality features — pipeline landed & tested
