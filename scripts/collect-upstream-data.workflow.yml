@@ -21,6 +21,10 @@ on:
         description: "Comma-separated seasons to collect probables for"
         required: false
         default: "2024,2025"
+      hist_seasons:
+        description: "Comma-separated seasons to collect schedule/results for"
+        required: false
+        default: "2016,2017,2018,2019,2021,2022,2023"
   push:
     branches:
       - arena/01a010f8-mlb-prediction-model-backtest
@@ -52,6 +56,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Collect historical schedule/results windows (official scores)
+        env:
+          HIST_SEASONS: ${{ github.event.inputs.hist_seasons || '2016,2017,2018,2019,2021,2022,2023' }}
+        run: |
+          for y in $(echo "$HIST_SEASONS" | tr ',' ' '); do
+            python -m mlb_predict collect \
+              --start "${y}-03-01" --end "${y}-11-15" --window-days 10
+          done
+
       - name: Collect probable starting pitchers (schedule + hydrate)
         env:
           SEASONS: ${{ github.event.inputs.seasons || '2024,2025' }}
@@ -79,6 +92,7 @@ jobs:
           name: official-mlb-captures
           if-no-files-found: error
           path: |
+            data/raw/schedule/
             data/raw/probables/
             data/raw/statcast/
             data/raw/probables_manifest.csv

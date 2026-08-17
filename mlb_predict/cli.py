@@ -119,6 +119,17 @@ def cmd_build_dataset_from_scores(args) -> int:
         })
     games = pd.DataFrame(rows)
     games = games.drop_duplicates(subset="game_pk")
+
+    # Union with an existing games.csv: the transcript is append-only and
+    # may cover only part of history (e.g. scores captures plus seasons
+    # collected via the raw schedule path). Rows already in games.csv that
+    # are not in this transcript must survive a rebuild.
+    if GAMES_CSV.exists():
+        prior = pd.read_csv(GAMES_CSV, dtype={"game_pk": int, "season": str})
+        prior["official_date"] = pd.to_datetime(prior["official_date"])
+        missing = prior[~prior["game_pk"].isin(set(games["game_pk"]))]
+        games = pd.concat([games, missing], ignore_index=True)
+
     games["home_win"] = (games["home_score"] > games["away_score"]).astype(int)
     games["total_runs"] = games["home_score"] + games["away_score"]
     games["run_diff_home"] = games["home_score"] - games["away_score"]
