@@ -1,0 +1,5 @@
+retrieved_utc,source_url,rows,transport
+2026-08-17T18:53:56.296458+00:00,https://baseballsavant.mlb.com/leaderboard/custom?year=2023&type=pitcher&min=100&selections=k_percent,bb_percent,xwoba,xera,xba,whiff_percent,exit_velocity_avg,barrel_batted_rate,p_formatted_ip,p_game,pa&chart=false&csv=true,127,page_capture
+2026-08-17T18:53:56.296458+00:00,https://baseballsavant.mlb.com/leaderboard/custom?year=2024&type=pitcher&min=100&selections=k_percent,bb_percent,xwoba,xera,xba,whiff_percent,exit_velocity_avg,barrel_batted_rate,p_formatted_ip,p_game,pa&chart=false&csv=true,126,page_capture
+2026-08-17T18:53:56.296458+00:00,https://baseballsavant.mlb.com/leaderboard/custom?year=2025&type=pitcher&min=100&selections=k_percent,bb_percent,xwoba,xera,xba,whiff_percent,exit_velocity_avg,barrel_batted_rate,p_formatted_ip,p_game,pa&chart=false&csv=true,127,page_capture
+2026-08-17T18:53:56.296458+00:00,https://statsapi.mlb.com/api/v1/teams?sportId=1&fields=teams,id,name,abbreviation,teamName,30,page_capture
