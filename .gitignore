@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Vendored upstream data repos (cloned via scripts/sync_sources.sh)
+vendor/
+
+# Raw collected feeds (large; only aggregated artifacts are committed)
+data/raw/
+data/cache/
+
+# OS noise
+.DS_Store
