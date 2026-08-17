@@ -166,13 +166,26 @@ def _load_games() -> pd.DataFrame:
 
 def cmd_backtest(args) -> int:
     games = _load_games()
+    extra = None
+    if getattr(args, "with_pitcher_features", False):
+        from .pitcher_features import PITCHER_FEATURES_CSV
+        if not PITCHER_FEATURES_CSV.exists():
+            raise SystemExit(
+                f"{PITCHER_FEATURES_CSV} missing; run: "
+                "python -m mlb_predict build-pitcher-features")
+        pf = pd.read_csv(PITCHER_FEATURES_CSV)
+        drop_audit = ["away_sp_name", "home_sp_name"]
+        pf = pf.drop(columns=[c for c in drop_audit if c in pf.columns])
+        extra = pf
+        print(f"pitcher features: {len(pf)} rows "
+              f"(both starters known: {int(pf['sp_known_both'].sum())})")
     cfg = BacktestConfig(season=args.season,
                          min_games_played=args.min_gp,
                          refit_days=args.refit_days,
                          tau=args.tau,
                          n_sims=args.n_sims)
     res = run_backtest(
-        games, cfg,
+        games, cfg, extra_features=extra,
         progress_cb=lambda d, n, date: print(f"  walk-forward {d}/{n} @ {date.date()}"))
     csv_p, json_p = save_result(res, cfg)
     rep = res.report
@@ -191,6 +204,38 @@ def cmd_backtest(args) -> int:
           f"(naive {t['naive_season_mean_mae']:.3f}) RMSE={t['model_rmse']:.3f} "
           f"O/U{t['ou_reference_line']} hit={t['over_hit_rate']:.4f}")
     print(f"\npredictions -> {csv_p}\nreport      -> {json_p}")
+    return 0
+
+
+def cmd_collect_probables(args) -> int:
+    from . import collect_probables
+    paths = collect_probables.collect_range(
+        args.start, args.end, args.window_days, refresh=args.refresh)
+    print(f"collected {len(paths)} probables windows under "
+          f"{collect_probables.RAW_PROBABLES_DIR}")
+    return 0
+
+
+def cmd_build_pitcher_features(args) -> int:
+    """Verified probables + prior-season Statcast boards -> pitcher features."""
+    from . import collect_probables, pitcher_features
+    payloads = collect_probables.load_collected()
+    if not payloads:
+        raise SystemExit(
+            f"no probables windows under {collect_probables.RAW_PROBABLES_DIR}. "
+            "Run: python -m mlb_predict collect-probables --start ... --end ...")
+    probables = collect_probables.payloads_to_frame(payloads)
+    games = _load_games()
+    probables, rep = collect_probables.verify_against_games(probables, games)
+    print("verify vs games.csv:", {k: v for k, v in rep.items()
+                                   if k != "dropped_game_pks"})
+    years = sorted({int(y) - 1 for y in games["season"].unique()})
+    pf = pitcher_features.build_pitcher_features(probables, years)
+    cov = pitcher_features.coverage_report(pf, probables, games)
+    print("coverage:", cov)
+    pitcher_features.PITCHER_FEATURES_CSV.parent.mkdir(parents=True, exist_ok=True)
+    pf.to_csv(pitcher_features.PITCHER_FEATURES_CSV, index=False)
+    print(f"{len(pf)} pitcher-feature rows -> {pitcher_features.PITCHER_FEATURES_CSV}")
     return 0
 
 
@@ -248,6 +293,20 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--refresh", action="store_true")
     p.set_defaults(fn=cmd_collect_statcast)
 
+    p = sub.add_parser("collect-probables",
+                       help="collect probable starting pitchers (schedule "
+                            "+ hydrate=probablePitcher)")
+    p.add_argument("--start", required=True)
+    p.add_argument("--end", required=True)
+    p.add_argument("--window-days", type=int, default=5)
+    p.add_argument("--refresh", action="store_true")
+    p.set_defaults(fn=cmd_collect_probables)
+
+    p = sub.add_parser("build-pitcher-features",
+                       help="probables + prior-season Statcast boards -> "
+                            "data/ref/pitcher_features.csv")
+    p.set_defaults(fn=cmd_build_pitcher_features)
+
     p = sub.add_parser("build-dataset", help="raw schedule cache -> games.csv")
     p.set_defaults(fn=cmd_build_dataset)
 
@@ -257,6 +316,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--refit-days", type=int, default=7)
     p.add_argument("--tau", type=float, default=0.03)
     p.add_argument("--n-sims", type=int, default=1500)
+    p.add_argument("--with-pitcher-features", action="store_true",
+                   help="join data/ref/pitcher_features.csv into the pool")
     p.set_defaults(fn=cmd_backtest)
 
     p = sub.add_parser("demo", help="offline synthetic end-to-end demo")

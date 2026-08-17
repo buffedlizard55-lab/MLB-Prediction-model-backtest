@@ -40,13 +40,22 @@ LEADERBOARDS: dict[str, str] = {
     "pitch_arsenal": (f"{SAVANT}/leaderboard/pitch-arsenal-stats"
                       f"?type=pitcher&year={{year}}&min={{min_pa}}&csv=true"),
     "custom_batting": (f"{SAVANT}/leaderboard/custom?year={{year}}&type=batter"
-                       f"&min={{min_pa}}&selections=k_bb,avg,xba,slg,xslg,woba,xwoba,"
-                       f"exit_velo_avg,barrels,brl_pct,hard_hit,sweet_spot_percent,"
-                       f"avg_best_speed&chart=false&csv=true"),
+                       f"&min={{min_pa}}&selections=pa,k_percent,bb_percent,batting_avg,"
+                       f"xba,xslg,woba,xwoba,exit_velocity_avg,barrel_batted_rate,"
+                       f"whiff_percent&chart=false&csv=true"),
     "custom_pitching": (f"{SAVANT}/leaderboard/custom?year={{year}}&type=pitcher"
-                        f"&min={{min_pa}}&selections=k_bb,avg,xba,slg,xslg,woba,xwoba,"
-                        f"exit_velo_avg,barrels,brl_pct,hard_hit,sweet_spot_percent,"
-                        f"avg_best_speed&chart=false&csv=true"),
+                        f"&min={{min_pa}}&selections=pa,k_percent,bb_percent,batting_avg,"
+                        f"xba,xslg,woba,xwoba,xera,exit_velocity_avg,barrel_batted_rate,"
+                        f"whiff_percent&chart=false&csv=true"),
+    # Verified selection names (probed live 2026-08): k_percent, bb_percent,
+    # xwoba, xera, xba, whiff_percent, exit_velocity_avg,
+    # barrel_batted_rate, p_formatted_ip, p_game, pa. Names like k_bb /
+    # exit_velo_avg / hard_hit silently return empty columns.
+    "pitching_quality": (f"{SAVANT}/leaderboard/custom?year={{year}}&type=pitcher"
+                         f"&min={{min_pa}}&selections=k_percent,bb_percent,xwoba,"
+                         f"xera,xba,whiff_percent,exit_velocity_avg,"
+                         f"barrel_batted_rate,p_formatted_ip,p_game,pa"
+                         f"&chart=false&csv=true"),
     "pitch_movement": (f"{SAVANT}/leaderboard/pitch-movement?year={{year}}"
                        f"&pitch_type=FF&min_pitches={{min_pa}}&csv=true"),
     "poptime": f"{SAVANT}/leaderboard/poptime?year={{year}}&min2b={{min_pa}}&csv=true",

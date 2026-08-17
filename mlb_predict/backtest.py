@@ -70,9 +70,31 @@ def _metrics(y: np.ndarray, p: np.ndarray) -> dict:
 
 
 def run_backtest(games: pd.DataFrame, cfg: BacktestConfig,
+                 extra_features: pd.DataFrame | None = None,
                  progress_cb=None) -> BacktestResult:
+    """Walk-forward backtest.
+
+    ``extra_features`` (optional): per-game pre-computed features keyed by
+    game_pk (e.g. starting-pitcher quality from pitcher_features.py). They
+    are merged into the candidate pool and go through the same selective
+    filter as everything else. Callers must guarantee they are leak-free;
+    pitcher_features.py does this by construction (prior-season boards).
+    """
     games = games.sort_values(["official_date", "game_pk"]).reset_index(drop=True)
     feats = build_features(games)
+    ml_features = list(ML_FEATURES)
+    if extra_features is not None and not extra_features.empty:
+        feats = feats.merge(extra_features, on="game_pk", how="left",
+                            validate="one_to_one", suffixes=("", "_extra"))
+        for col in extra_features.columns:
+            if col != "game_pk" and col not in ml_features:
+                ml_features.append(col)
+        cfg_note = {
+            "extra_features": [c for c in extra_features.columns
+                               if c != "game_pk"],
+        }
+    else:
+        cfg_note = {"extra_features": []}
     season_mask = feats["season"] == cfg.season
 
     eligible_dates = sorted(feats.loc[
@@ -99,7 +121,7 @@ def run_backtest(games: pd.DataFrame, cfg: BacktestConfig,
         need_fit = (model is None or last_fit is None
                     or (date - last_fit).days >= cfg.refit_days)
         if need_fit and len(train) >= cfg.warmup_min_obs:
-            sel = select_features(train, ML_FEATURES, "home_win", tau=cfg.tau)
+            sel = select_features(train, ml_features, "home_win", tau=cfg.tau)
             sim_globals = estimate_globals(
                 train["home_score"].to_numpy(), train["away_score"].to_numpy())
             # Simulate the training games with the globals known at this
@@ -162,7 +184,8 @@ def run_backtest(games: pd.DataFrame, cfg: BacktestConfig,
                     "config": {"min_games_played": cfg.min_games_played,
                                "refit_days": cfg.refit_days,
                                "tau": cfg.tau, "n_sims": cfg.n_sims,
-                               "warmup_min_obs": cfg.warmup_min_obs},
+                               "warmup_min_obs": cfg.warmup_min_obs,
+                               **cfg_note},
                     "n_predictions": int(len(pdf)),
                     "n_refits": len(selections),
                     "selections": selections}
