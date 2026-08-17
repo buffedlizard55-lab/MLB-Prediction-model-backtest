@@ -1812,3 +1812,135 @@ game_pk,season,official_date,game_date,game_type,away_team_id,away_team,away_sco
 776761,2025,2025-08-13,2025-08-13,R,136,Seattle Mariners,3,110,Baltimore Orioles,4,1,7,1
 776765,2025,2025-08-13,2025-08-13,R,143,Philadelphia Phillies,0,113,Cincinnati Reds,8,1,8,8
 776766,2025,2025-08-13,2025-08-13,R,146,Miami Marlins,13,114,Cleveland Guardians,4,0,17,-9
+776742,2025,2025-08-14,2025-08-14,R,109,Arizona Diamondbacks,8,115,Colorado Rockies,2,0,10,-6
+776743,2025,2025-08-14,2025-08-14,R,143,Philadelphia Phillies,2,120,Washington Nationals,3,1,5,1
+776744,2025,2025-08-14,2025-08-14,R,116,Detroit Tigers,4,142,Minnesota Twins,3,0,7,-1
+776745,2025,2025-08-14,2025-08-14,R,146,Miami Marlins,4,114,Cleveland Guardians,9,1,13,5
+776747,2025,2025-08-14,2025-08-14,R,112,Chicago Cubs,1,141,Toronto Blue Jays,2,1,3,1
+776748,2025,2025-08-14,2025-08-14,R,144,Atlanta Braves,4,121,New York Mets,3,0,7,-1
+776750,2025,2025-08-14,2025-08-14,R,136,Seattle Mariners,3,110,Baltimore Orioles,5,1,8,2
+776727,2025,2025-08-15,2025-08-15,R,135,San Diego Padres,2,119,Los Angeles Dodgers,3,1,5,1
+776728,2025,2025-08-15,2025-08-15,R,145,Chicago White Sox,1,118,Kansas City Royals,3,1,4,2
+776729,2025,2025-08-15,2025-08-15,R,139,Tampa Bay Rays,7,137,San Francisco Giants,6,0,13,-1
+776730,2025,2025-08-15,2025-08-15,R,109,Arizona Diamondbacks,3,115,Colorado Rockies,4,1,7,1
+776731,2025,2025-08-15,2025-08-15,R,147,New York Yankees,4,138,St. Louis Cardinals,3,0,7,-1
+776732,2025,2025-08-15,2025-08-15,R,116,Detroit Tigers,7,142,Minnesota Twins,0,0,7,-7
+776733,2025,2025-08-15,2025-08-15,R,110,Baltimore Orioles,7,117,Houston Astros,0,0,7,-7
+776734,2025,2025-08-15,2025-08-15,R,108,Los Angeles Angels,3,133,Athletics,10,1,13,7
+776735,2025,2025-08-15,2025-08-15,R,140,Texas Rangers,5,141,Toronto Blue Jays,6,1,11,1
+776736,2025,2025-08-15,2025-08-15,R,136,Seattle Mariners,11,121,New York Mets,9,0,20,-2
+776737,2025,2025-08-15,2025-08-15,R,134,Pittsburgh Pirates,3,112,Chicago Cubs,2,0,5,-1
+776738,2025,2025-08-15,2025-08-15,R,144,Atlanta Braves,2,114,Cleveland Guardians,0,0,2,-2
+776739,2025,2025-08-15,2025-08-15,R,143,Philadelphia Phillies,6,120,Washington Nationals,2,0,8,-4
+776740,2025,2025-08-15,2025-08-15,R,158,Milwaukee Brewers,10,113,Cincinnati Reds,8,0,18,-2
+776741,2025,2025-08-15,2025-08-15,R,146,Miami Marlins,1,111,Boston Red Sox,2,1,3,1
+776711,2025,2025-08-16,2025-08-16,R,139,Tampa Bay Rays,2,137,San Francisco Giants,1,0,3,-1
+776712,2025,2025-08-16,2025-08-16,R,145,Chicago White Sox,2,118,Kansas City Royals,6,1,8,4
+776713,2025,2025-08-16,2025-08-16,R,147,New York Yankees,12,138,St. Louis Cardinals,8,0,20,-4
+776715,2025,2025-08-16,2025-08-16,R,109,Arizona Diamondbacks,7,115,Colorado Rockies,10,1,17,3
+776716,2025,2025-08-16,2025-08-16,R,116,Detroit Tigers,8,142,Minnesota Twins,5,0,13,-3
+776717,2025,2025-08-16,2025-08-16,R,135,San Diego Padres,0,119,Los Angeles Dodgers,6,1,6,6
+776718,2025,2025-08-16,2025-08-16,R,108,Los Angeles Angels,2,133,Athletics,7,1,9,5
+776719,2025,2025-08-16,2025-08-16,R,134,Pittsburgh Pirates,1,112,Chicago Cubs,3,1,4,2
+776720,2025,2025-08-16,2025-08-16,R,144,Atlanta Braves,10,114,Cleveland Guardians,1,0,11,-9
+776721,2025,2025-08-16,2025-08-16,R,158,Milwaukee Brewers,6,113,Cincinnati Reds,5,0,11,-1
+776722,2025,2025-08-16,2025-08-16,R,110,Baltimore Orioles,4,117,Houston Astros,5,1,9,1
+776723,2025,2025-08-16,2025-08-16,R,140,Texas Rangers,2,141,Toronto Blue Jays,14,1,16,12
+776724,2025,2025-08-16,2025-08-16,R,146,Miami Marlins,5,111,Boston Red Sox,7,1,12,2
+776725,2025,2025-08-16,2025-08-16,R,143,Philadelphia Phillies,0,120,Washington Nationals,2,1,2,2
+776726,2025,2025-08-16,2025-08-16,R,136,Seattle Mariners,1,121,New York Mets,3,1,4,2
+776697,2025,2025-08-17,2025-08-17,R,135,San Diego Padres,4,119,Los Angeles Dodgers,5,1,9,1
+776698,2025,2025-08-17,2025-08-17,R,147,New York Yankees,8,138,St. Louis Cardinals,4,0,12,-4
+776699,2025,2025-08-17,2025-08-17,R,108,Los Angeles Angels,11,133,Athletics,5,0,16,-6
+776700,2025,2025-08-17,2025-08-17,R,116,Detroit Tigers,1,142,Minnesota Twins,8,1,9,7
+776701,2025,2025-08-17,2025-08-17,R,109,Arizona Diamondbacks,5,115,Colorado Rockies,6,1,11,1
+776702,2025,2025-08-17,2025-08-17,R,145,Chicago White Sox,2,118,Kansas City Royals,6,1,8,4
+776703,2025,2025-08-17,2025-08-17,R,139,Tampa Bay Rays,1,137,San Francisco Giants,7,1,8,6
+776704,2025,2025-08-17,2025-08-17,R,134,Pittsburgh Pirates,3,112,Chicago Cubs,4,1,7,1
+776705,2025,2025-08-17,2025-08-17,R,110,Baltimore Orioles,12,117,Houston Astros,0,0,12,-12
+776706,2025,2025-08-17,2025-08-17,R,144,Atlanta Braves,5,114,Cleveland Guardians,4,0,9,-1
+776707,2025,2025-08-17,2025-08-17,R,136,Seattle Mariners,3,121,New York Mets,7,1,10,4
+776708,2025,2025-08-17,2025-08-17,R,143,Philadelphia Phillies,11,120,Washington Nationals,9,0,20,-2
+776709,2025,2025-08-17,2025-08-17,R,158,Milwaukee Brewers,2,113,Cincinnati Reds,3,1,5,1
+776710,2025,2025-08-17,2025-08-17,R,140,Texas Rangers,10,141,Toronto Blue Jays,4,0,14,-6
+776714,2025,2025-08-17,2025-08-17,R,146,Miami Marlins,5,111,Boston Red Sox,3,0,8,-2
+776681,2025,2025-08-18,2025-08-18,R,113,Cincinnati Reds,4,108,Los Angeles Angels,1,0,5,-3
+776682,2025,2025-08-18,2025-08-18,R,114,Cleveland Guardians,3,109,Arizona Diamondbacks,1,0,4,-2
+776683,2025,2025-08-18,2025-08-18,R,137,San Francisco Giants,4,135,San Diego Padres,3,0,7,-1
+776688,2025,2025-08-18,2025-08-18,R,138,St. Louis Cardinals,8,146,Miami Marlins,3,0,11,-5
+776689,2025,2025-08-18,2025-08-18,R,136,Seattle Mariners,7,143,Philadelphia Phillies,12,1,19,5
+776690,2025,2025-08-18,2025-08-18,R,140,Texas Rangers,3,118,Kansas City Royals,4,1,7,1
+776692,2025,2025-08-18,2025-08-18,R,117,Houston Astros,0,116,Detroit Tigers,10,1,10,10
+776693,2025,2025-08-18,2025-08-18,R,119,Los Angeles Dodgers,3,115,Colorado Rockies,4,1,7,1
+776694,2025,2025-08-18,2025-08-18,R,141,Toronto Blue Jays,2,134,Pittsburgh Pirates,5,1,7,3
+776695,2025,2025-08-18,2025-08-18,R,110,Baltimore Orioles,6,111,Boston Red Sox,3,0,9,-3
+776696,2025,2025-08-18,2025-08-18,R,145,Chicago White Sox,13,144,Atlanta Braves,9,0,22,-4
+777459,2025,2025-08-18,2025-08-18,R,158,Milwaukee Brewers,7,112,Chicago Cubs,0,0,7,-7
+776667,2025,2025-08-19,2025-08-19,R,137,San Francisco Giants,1,135,San Diego Padres,5,1,6,4
+776668,2025,2025-08-19,2025-08-19,R,113,Cincinnati Reds,6,108,Los Angeles Angels,4,0,10,-2
+776671,2025,2025-08-19,2025-08-19,R,119,Los Angeles Dodgers,11,115,Colorado Rockies,4,0,15,-7
+776672,2025,2025-08-19,2025-08-19,R,114,Cleveland Guardians,5,109,Arizona Diamondbacks,6,1,11,1
+776674,2025,2025-08-19,2025-08-19,R,133,Athletics,6,142,Minnesota Twins,3,0,9,-3
+776675,2025,2025-08-19,2025-08-19,R,140,Texas Rangers,2,118,Kansas City Royals,5,1,7,3
+776676,2025,2025-08-19,2025-08-19,R,158,Milwaukee Brewers,1,112,Chicago Cubs,4,1,5,3
+776677,2025,2025-08-19,2025-08-19,R,147,New York Yankees,13,139,Tampa Bay Rays,3,0,16,-10
+776678,2025,2025-08-19,2025-08-19,R,121,New York Mets,8,120,Washington Nationals,1,0,9,-7
+776679,2025,2025-08-19,2025-08-19,R,141,Toronto Blue Jays,7,134,Pittsburgh Pirates,3,0,10,-4
+776680,2025,2025-08-19,2025-08-19,R,136,Seattle Mariners,4,143,Philadelphia Phillies,6,1,10,2
+776684,2025,2025-08-19,2025-08-19,R,110,Baltimore Orioles,4,111,Boston Red Sox,3,0,7,-1
+776685,2025,2025-08-19,2025-08-19,R,117,Houston Astros,0,116,Detroit Tigers,1,1,1,1
+776686,2025,2025-08-19,2025-08-19,R,138,St. Louis Cardinals,7,146,Miami Marlins,4,0,11,-3
+776687,2025,2025-08-19,2025-08-19,R,145,Chicago White Sox,10,144,Atlanta Braves,11,1,21,1
+776691,2025,2025-08-19,2025-08-19,R,158,Milwaukee Brewers,4,112,Chicago Cubs,6,1,10,2
+776652,2025,2025-08-20,2025-08-20,R,113,Cincinnati Reds,1,108,Los Angeles Angels,2,1,3,1
+776656,2025,2025-08-20,2025-08-20,R,137,San Francisco Giants,1,135,San Diego Padres,8,1,9,7
+776658,2025,2025-08-20,2025-08-20,R,114,Cleveland Guardians,2,109,Arizona Diamondbacks,3,1,5,1
+776659,2025,2025-08-20,2025-08-20,R,121,New York Mets,4,120,Washington Nationals,5,1,9,1
+776660,2025,2025-08-20,2025-08-20,R,119,Los Angeles Dodgers,3,115,Colorado Rockies,8,1,11,5
+776661,2025,2025-08-20,2025-08-20,R,141,Toronto Blue Jays,1,134,Pittsburgh Pirates,2,1,3,1
+776662,2025,2025-08-20,2025-08-20,R,136,Seattle Mariners,2,143,Philadelphia Phillies,11,1,13,9
+776663,2025,2025-08-20,2025-08-20,R,158,Milwaukee Brewers,3,112,Chicago Cubs,4,1,7,1
+776664,2025,2025-08-20,2025-08-20,R,147,New York Yankees,6,139,Tampa Bay Rays,4,0,10,-2
+776665,2025,2025-08-20,2025-08-20,R,133,Athletics,4,142,Minnesota Twins,2,0,6,-2
+776666,2025,2025-08-20,2025-08-20,R,140,Texas Rangers,6,118,Kansas City Royals,3,0,9,-3
+776669,2025,2025-08-20,2025-08-20,R,145,Chicago White Sox,0,144,Atlanta Braves,1,1,1,1
+776670,2025,2025-08-20,2025-08-20,R,138,St. Louis Cardinals,2,146,Miami Marlins,6,1,8,4
+776673,2025,2025-08-20,2025-08-20,R,117,Houston Astros,2,116,Detroit Tigers,7,1,9,5
+776631,2025,2025-08-21,2025-08-21,R,138,St. Louis Cardinals,7,139,Tampa Bay Rays,4,0,11,-3
+776642,2025,2025-08-21,2025-08-21,R,137,San Francisco Giants,4,135,San Diego Padres,8,1,12,4
+776644,2025,2025-08-21,2025-08-21,R,119,Los Angeles Dodgers,9,115,Colorado Rockies,5,0,14,-4
+776650,2025,2025-08-21,2025-08-21,R,121,New York Mets,3,120,Washington Nationals,9,1,12,6
+776651,2025,2025-08-21,2025-08-21,R,158,Milwaukee Brewers,4,112,Chicago Cubs,1,0,5,-3
+776653,2025,2025-08-21,2025-08-21,R,133,Athletics,8,142,Minnesota Twins,3,0,11,-5
+776654,2025,2025-08-21,2025-08-21,R,111,Boston Red Sox,6,147,New York Yankees,3,0,9,-3
+776655,2025,2025-08-21,2025-08-21,R,117,Houston Astros,7,110,Baltimore Orioles,2,0,9,-5
+776657,2025,2025-08-21,2025-08-21,R,140,Texas Rangers,4,118,Kansas City Royals,6,1,10,2
+776633,2025,2025-08-22,2025-08-22,R,138,St. Louis Cardinals,6,139,Tampa Bay Rays,10,1,16,4
+776634,2025,2025-08-22,2025-08-22,R,137,San Francisco Giants,4,158,Milwaukee Brewers,5,1,9,1
+776635,2025,2025-08-22,2025-08-22,R,113,Cincinnati Reds,5,109,Arizona Diamondbacks,6,1,11,1
+776636,2025,2025-08-22,2025-08-22,R,119,Los Angeles Dodgers,1,135,San Diego Padres,2,1,3,1
+776637,2025,2025-08-22,2025-08-22,R,115,Colorado Rockies,0,134,Pittsburgh Pirates,9,1,9,9
+776638,2025,2025-08-22,2025-08-22,R,133,Athletics,2,136,Seattle Mariners,3,1,5,1
+776639,2025,2025-08-22,2025-08-22,R,142,Minnesota Twins,9,145,Chicago White Sox,7,0,16,-2
+776640,2025,2025-08-22,2025-08-22,R,112,Chicago Cubs,3,108,Los Angeles Angels,2,0,5,-1
+776641,2025,2025-08-22,2025-08-22,R,114,Cleveland Guardians,3,140,Texas Rangers,4,1,7,1
+776643,2025,2025-08-22,2025-08-22,R,117,Houston Astros,10,110,Baltimore Orioles,7,0,17,-3
+776645,2025,2025-08-22,2025-08-22,R,121,New York Mets,12,144,Atlanta Braves,7,0,19,-5
+776646,2025,2025-08-22,2025-08-22,R,141,Toronto Blue Jays,5,146,Miami Marlins,2,0,7,-3
+776647,2025,2025-08-22,2025-08-22,R,111,Boston Red Sox,1,147,New York Yankees,0,0,1,-1
+776648,2025,2025-08-22,2025-08-22,R,120,Washington Nationals,5,143,Philadelphia Phillies,4,0,9,-1
+776649,2025,2025-08-22,2025-08-22,R,118,Kansas City Royals,5,116,Detroit Tigers,7,1,12,2
+776617,2025,2025-08-23,2025-08-23,R,119,Los Angeles Dodgers,1,135,San Diego Padres,5,1,6,4
+776618,2025,2025-08-23,2025-08-23,R,112,Chicago Cubs,12,108,Los Angeles Angels,1,0,13,-11
+776619,2025,2025-08-23,2025-08-23,R,142,Minnesota Twins,3,145,Chicago White Sox,7,1,10,4
+776620,2025,2025-08-23,2025-08-23,R,133,Athletics,2,136,Seattle Mariners,1,0,3,-1
+776621,2025,2025-08-23,2025-08-23,R,137,San Francisco Giants,7,158,Milwaukee Brewers,1,0,8,-6
+776622,2025,2025-08-23,2025-08-23,R,113,Cincinnati Reds,1,109,Arizona Diamondbacks,10,1,11,9
+776623,2025,2025-08-23,2025-08-23,R,114,Cleveland Guardians,0,140,Texas Rangers,10,1,10,10
+776625,2025,2025-08-23,2025-08-23,R,118,Kansas City Royals,2,116,Detroit Tigers,4,1,6,2
+776626,2025,2025-08-23,2025-08-23,R,121,New York Mets,9,144,Atlanta Braves,2,0,11,-7
+776627,2025,2025-08-23,2025-08-23,R,111,Boston Red Sox,12,147,New York Yankees,1,0,13,-11
+776628,2025,2025-08-23,2025-08-23,R,120,Washington Nationals,4,143,Philadelphia Phillies,6,1,10,2
+776629,2025,2025-08-23,2025-08-23,R,117,Houston Astros,9,110,Baltimore Orioles,8,0,17,-1
+776630,2025,2025-08-23,2025-08-23,R,141,Toronto Blue Jays,7,146,Miami Marlins,6,0,13,-1
+776632,2025,2025-08-23,2025-08-23,R,115,Colorado Rockies,1,134,Pittsburgh Pirates,5,1,6,4
