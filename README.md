@@ -128,10 +128,10 @@ average breakeven price.
 
 ## Latest results — 2025 full regular season (walk-forward, no lookahead)
 
-Dataset: **6,187 verified official games** — the **complete 2024 season
-(2,429 games; HOU and CLE at 161 because the Sep 29 game was rained out and
-never made up), the complete 2025 season (2,430 games), plus the first
-1,328 games of 2023 (Mar 30 – Jul 7, all 30 teams, 87–91 games each)**,
+Dataset: **7,289 verified official games — three complete seasons**
+(2023: exactly 2,430 games / 162 per team; 2024: 2,429 games, HOU and CLE
+at 161 because the Sep 29 game was rained out and never made up; 2025:
+2,430 games),
 transcribed 1:1 from `statsapi.mlb.com` schedule responses with a
 provenance manifest. Every team's game total was audited against the
 official per-team schedule endpoints. Backtest evaluates **2,430
@@ -164,21 +164,23 @@ Training-history ablation, all on the same 2,430 out-of-sample games:
 | + 2024 first half | 55.5% | 61.4% |
 | + full 2024 season | 56.1% | 66.4% (n=455) |
 | + 2023 Apr–May (800 games) | 55.9% | 67.4% (n=347) |
-| + 2023 through Jul 7 (1,328 games) | 55.4% | 64.6% (n=359) — now *trailing* the season-win% baseline (56.1%) overall |
+| + 2023 partial (1,328 games) | 55.4% | 64.6% (n=359) |
+| **+ full 2023 season (2,430 games)** | **55.7%** | **66.4% (n=372)** — still trailing the season-win% baseline (56.1%) overall |
 
-**Second out-of-sample season (2026-08-17, enabled by the 2023 ingest):**
-backtesting 2024 (trained on the 2023 partial only — much thinner history)
-gives model acc 54.8% vs always-home 52.2%. The selective ≥0.10 subset
-swings from 63.9% (n=280, 800-game training) to 58.3% (n=266, 1,328-game
-training) — a ±6pp move from training depth alone, far outside any
-plausible edge margin, and below its own breakeven under either depth.
-The selective metric is not season-stable.
+**Second out-of-sample season — 2024, trained on the complete 2023
+season (2026-08-17):** model acc **55.7%** vs always-home 52.2% and
+season-win% 54.1%; AUC 0.580. Selective ≥0.06 = 61.3% (n=918, above its
+own ~59.6% breakeven) and ≥0.10 = 63.9% (n=327, above its ~62.8%
+breakeven). Under thin partial-2023 training the same subset swung to
+58.3% — training depth matters materially.
 
-**Baseline equivalence (2026-08-17):** the leak-free rolling win-%
-favourite baseline (home tiebreak, shrunk to .500) *exactly* matches the
-model's selective subsets in both seasons — 67.4% vs 67.4% (2025, n=347)
-and 63.9% vs 63.9% (2024, n=280) at ≥0.10 edge. The confident picks are
-favourite picks; extra same-family history does not change this.
+**Baseline equivalence (both seasons, full history):** the leak-free
+rolling win-% favourite baseline *exactly* reproduces the model's
+selective subsets — 2025: 66.4% vs 66.4% (≥0.10), 60.4% vs 60.3% (≥0.06);
+2024: 63.9% vs 63.9% (≥0.10), 61.3% vs 61.0% (≥0.06). The confident picks
+are favourite picks in every configuration tested; creating genuine lift
+needs signal a team-form model cannot see (starter matchups — pipeline
+landed, data collection pending) and real odds to measure against.
 
 **Caveat (added 2026-08-17):** a deliberately trivial baseline — pick the
 rolling win-% favourite with home tiebreak (state frozen at each day
@@ -199,10 +201,10 @@ below) and an odds feed so ROI/CLV replaces breakeven accounting.
 4. ✅ 2024 first-half ingest → multi-year train history (lifted selective ≥0.10 to 61.4%)
 5. ✅ Full 2024 season ingest (2,429 games, audited per-team vs official schedules) →
    full two-year history backtest: 56.1% overall, **66.4%** on the ≥0.10-edge subset
-5b. 🔶 2023 ingest at 1,328 games (Mar 30 – Jul 7, page-captured +
-   validated); enabled the first second-season backtest (2024). Remaining
-   2023 windows (Jul 8 – Oct 1, ~9 captures) resume with the same
-   one-command processor;
+5b. ✅ Full 2023 season ingested (2,430 games, exactly 162 per team,
+   19 page-captured windows Mar 30 – Oct 1, validated + manifest-ed);
+   second out-of-sample season (2024) backtested at full training depth;
+   2016–2022 via the same processor or the CI workflow;
    2016–2022 + full 2023 via the CI workflow once `scripts/
    collect-upstream-data.workflow.yml` is copied to `.github/workflows/`
 6. 🔶 Statcast pitcher quality features — pipeline landed & tested
