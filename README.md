@@ -59,9 +59,11 @@ PYTHONPATH=. python -m pytest tests -q
 
 # real collection on a machine with direct MLB egress (your laptop / CI):
 PYTHONPATH=. python -m mlb_predict collect --start 2025-03-17 --end 2025-09-30
-PYTHONPATH=. python -m mlb_predict collect-statcast --board sprint_speed --year 2025
+PYTHONPATH=. python -m mlb_predict collect-statcast --board pitching_quality --year 2025 --min-pa 100
+PYTHONPATH=. python -m mlb_predict collect-probables --start 2025-03-17 --end 2025-09-30
 PYTHONPATH=. python -m mlb_predict build-dataset
-PYTHONPATH=. python -m mlb_predict backtest --season 2025
+PYTHONPATH=. python -m mlb_predict build-pitcher-features
+PYTHONPATH=. python -m mlb_predict backtest --season 2025 --with-pitcher-features
 
 # full PBP archive via the vendored MLB-PBP package (stdlib-only):
 PYTHONPATH=. python -m mlb_predict.pbp_archive range 2025-04-01 2025-04-07
@@ -93,6 +95,11 @@ average breakeven price.
 - `mlb_predict/collect_schedule.py` — official schedule/results collector (resumable, raw-gz cache)
 - `mlb_predict/parse_schedule.py` — verified ground-truth parser (rejects inconsistent rows)
 - `mlb_predict/collect_statcast.py` — Savant leaderboard collector (URLs per StatcastMLB docs)
+- `mlb_predict/collect_probables.py` — official schedule + `hydrate=probablePitcher`
+  captures; verified parser cross-checked against games.csv
+- `mlb_predict/pitcher_features.py` — leak-free prior-season starter quality
+  (xwOBA/xERA-against, K%, BB%, IP) joined on official probables; rookies stay
+  missing with `sp_known` flags
 - `mlb_predict/pbp_archive.py` — adapter around vendored `mlb_pbp` for full PBP
 - `mlb_predict/features.py` — leak-free rolling team-state features (shift-before-roll)
 - `mlb_predict/simulate.py` — Monte Carlo game simulation (Gamma-Poisson run model)
@@ -108,15 +115,23 @@ average breakeven price.
 
 - `data/raw/scores_manifest.csv` — every ingested scores batch with retrieval
   timestamp and exact source URL.
+- `data/raw/probables_manifest.csv` / `data/raw/statcast_manifest.csv` — same
+  ledger for probable-pitcher schedule captures and Savant board captures.
+- `data/ref/statcast/pitching_quality_<year>_min100.csv` — parsed copies of the
+  official Savant custom pitching boards (2023–2025, min 100 PA against) used
+  for starter-quality features.
 - `data/raw/schedule/*.json.gz` — verbatim official schedule responses.
 - `data/results/backtest_<season>_report.json` — full walk-forward report
   including the feature selection made at every refit.
+- `data/raw/page_capture/scores_2023/` — verbatim 2023 schedule window
+  captures (10-day windows, slim official projection) behind the transcript.
 
 ## Latest results — 2025 full regular season (walk-forward, no lookahead)
 
-Dataset: **4,859 verified official games** — the **complete 2024 season
-(2,429 games; HOU and CLE at 161 because the Sep 29 game was rained out and
-never made up) plus the complete 2025 season (2,430 games)**, all 30 teams,
+Dataset: **7,289 verified official games — three complete seasons**
+(2023: exactly 2,430 games / 162 per team; 2024: 2,429 games, HOU and CLE
+at 161 because the Sep 29 game was rained out and never made up; 2025:
+2,430 games),
 transcribed 1:1 from `statsapi.mlb.com` schedule responses with a
 provenance manifest. Every team's game total was audited against the
 official per-team schedule endpoints. Backtest evaluates **2,430
@@ -147,13 +162,36 @@ Training-history ablation, all on the same 2,430 out-of-sample games:
 |---|---|---|
 | 2025 season only (rolling) | 54.0% | 57.8% |
 | + 2024 first half | 55.5% | 61.4% |
-| **+ full 2024 season (current)** | **56.1%** | **66.4%** |
+| + full 2024 season | 56.1% | 66.4% (n=455) |
+| + 2023 Apr–May (800 games) | 55.9% | 67.4% (n=347) |
+| + 2023 partial (1,328 games) | 55.4% | 64.6% (n=359) |
+| **+ full 2023 season (2,430 games)** | **55.7%** | **66.4% (n=372)** — still trailing the season-win% baseline (56.1%) overall |
 
-At ≥0.10 edge the model is right 66.4% of the time on ~455 games/season
-while only needing ~63% (breakeven ~1.59) to profit at fair prices —
-the strongest signal in the project so far. Next accuracy levers:
-Statcast pitcher/batter features via the StatcastMLB harvester, and an
-odds feed so ROI/CLV can replace breakeven accounting.
+**Second out-of-sample season — 2024, trained on the complete 2023
+season (2026-08-17):** model acc **55.7%** vs always-home 52.2% and
+season-win% 54.1%; AUC 0.580. Selective ≥0.06 = 61.3% (n=918, above its
+own ~59.6% breakeven) and ≥0.10 = 63.9% (n=327, above its ~62.8%
+breakeven). Under thin partial-2023 training the same subset swung to
+58.3% — training depth matters materially.
+
+**Baseline equivalence (both seasons, full history):** the leak-free
+rolling win-% favourite baseline *exactly* reproduces the model's
+selective subsets — 2025: 66.4% vs 66.4% (≥0.10), 60.4% vs 60.3% (≥0.06);
+2024: 63.9% vs 63.9% (≥0.10), 61.3% vs 61.0% (≥0.06). The confident picks
+are favourite picks in every configuration tested; creating genuine lift
+needs signal a team-form model cannot see (starter matchups — pipeline
+landed, data collection pending) and real odds to measure against.
+
+**Caveat (added 2026-08-17):** a deliberately trivial baseline — pick the
+rolling win-% favourite with home tiebreak (state frozen at each day
+boundary, shrunk toward .500) — reproduces the selective subsets almost
+exactly: 66.4% at ≥0.10 edge (same as the model, agreeing on 451/455
+picks) and 60.4% at ≥0.06 (vs 60.3%). The selective-play accuracy is
+therefore dominated by "bet the favourite", which the market prices in.
+The breakeven prices above are derived from the model's own
+probabilities, not real odds, so they are not evidence of monetary edge.
+Genuine next levers: starting-pitcher matchup features (in progress,
+below) and an odds feed so ROI/CLV replaces breakeven accounting.
 
 ## Roadmap
 
@@ -163,7 +201,26 @@ odds feed so ROI/CLV can replace breakeven accounting.
 4. ✅ 2024 first-half ingest → multi-year train history (lifted selective ≥0.10 to 61.4%)
 5. ✅ Full 2024 season ingest (2,429 games, audited per-team vs official schedules) →
    full two-year history backtest: 56.1% overall, **66.4%** on the ≥0.10-edge subset
-6. ⬜ Statcast pitcher/batter quality features (via `vendor/StatcastMLB`)
+5b. ✅ Full 2023 season ingested (2,430 games, exactly 162 per team,
+   19 page-captured windows Mar 30 – Oct 1, validated + manifest-ed);
+   second out-of-sample season (2024) backtested at full training depth;
+5c. 🔶 Backfill to the start of Statcast (2015): 2015 started (250 games,
+   Apr 5–24, via the season-generic `scripts/process_scores.py <season>`).
+   Missing: rest of 2015 (~24 windows) + 2016–2022 (~17k games). Fastest
+   path: copy `scripts/collect-upstream-data.workflow.yml` to
+   `.github/workflows/` and run it (hist_seasons default = 2015–2022), or
+   run the `collect` command per season on any machine with MLB egress;
+   page-capture continues at roughly one season per session;
+   2016–2022 + full 2023 via the CI workflow once `scripts/
+   collect-upstream-data.workflow.yml` is copied to `.github/workflows/`
+6. 🔶 Statcast pitcher quality features — pipeline landed & tested
+   (`collect-probables` → `build-pitcher-features` → `backtest
+   --with-pitcher-features`); official Savant pitching boards for
+   2023–2025 are committed under `data/ref/statcast/`; remaining step is
+   collecting the two seasons of `hydrate=probablePitcher` schedule
+   captures (~5 min of egress; the sandbox has none — run the two
+   `collect-probables` commands on a laptop or enable the CI workflow in
+   `scripts/collect-upstream-data.workflow.yml`)
 7. ⬜ Odds feed adapter → ROI/CLV evaluation instead of breakeven prices
 8. ⬜ Full PBP-derived features (run expectancy, bullpen load) via `vendor/MLB-PBP`
 

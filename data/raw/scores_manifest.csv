@@ -159,3 +159,32 @@ retrieved_utc,source_url,rows
 2026-08-17T10:53:16.852591+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2024-06-21&endDate=2024-06-30&gameTypes=R (chunk 3),25
 2026-08-17T10:53:48.014750+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2024-06-21&endDate=2024-06-30&gameTypes=R (chunk 4),25
 2026-08-17T10:54:15.624098+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2024-06-21&endDate=2024-06-30&gameTypes=R (chunk 5),16
+2026-08-17T20:08:44.170367+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-03-30&endDate=2023-04-08&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,126
+2026-08-17T20:08:45.268358+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-04-09&endDate=2023-04-18&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,138
+2026-08-17T20:11:02.514878+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-04-19&endDate=2023-04-28&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,131
+2026-08-17T20:11:03.851773+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-04-29&endDate=2023-05-08&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,134
+2026-08-17T20:14:23.152299+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-05-09&endDate=2023-05-18&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,129
+2026-08-17T20:14:24.504975+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-05-19&endDate=2023-05-28&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,142
+2026-08-17T20:23:19.917504+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-05-29&endDate=2023-06-07&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,128
+2026-08-17T20:23:21.075306+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-06-08&endDate=2023-06-17&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,133
+2026-08-17T20:26:52.547716+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-06-18&endDate=2023-06-27&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,128
+2026-08-17T20:26:53.734086+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-06-28&endDate=2023-07-07&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,139
+2026-08-17T21:04:35.244319+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-07-08&endDate=2023-07-17&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,85
+2026-08-17T21:04:36.409280+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-07-18&endDate=2023-07-27&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,129
+2026-08-17T21:07:15.665328+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-07-28&endDate=2023-08-06&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,140
+2026-08-17T21:07:16.828891+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-08-07&endDate=2023-08-16&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,134
+2026-08-17T21:09:44.976594+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-08-17&endDate=2023-08-26&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,129
+2026-08-17T21:09:46.113065+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-08-27&endDate=2023-09-05&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,135
+2026-08-17T21:12:51.213037+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-09-06&endDate=2023-09-15&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,134
+2026-08-17T21:12:52.396240+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-09-16&endDate=2023-09-25&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,129
+2026-08-17T21:12:53.577868+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-09-26&endDate=2023-10-01&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,87
+2026-08-17T21:27:29.920775+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-04-05&endDate=2015-04-14&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,118
+2026-08-17T21:27:31.015778+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-04-15&endDate=2015-04-24&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,132
+2026-08-17T21:33:48.054159+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-04-25&endDate=2015-05-04&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,132
+2026-08-17T21:33:49.310669+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-05-05&endDate=2015-05-14&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,136
+2026-08-17T21:36:16.300465+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-05-15&endDate=2015-05-24&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,140
+2026-08-17T21:36:17.426921+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-05-25&endDate=2015-06-03&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,139
+2026-08-17T21:38:39.072111+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-04&endDate=2015-06-13&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,132
+2026-08-17T21:38:40.239516+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-14&endDate=2015-06-23&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,139
+2026-08-17T21:41:10.390307+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-24&endDate=2015-07-03&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,136
+2026-08-17T21:41:11.496374+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-07-04&endDate=2015-07-13&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,126
