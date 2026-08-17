@@ -58,7 +58,7 @@ jobs:
 
       - name: Collect historical schedule/results windows (official scores)
         env:
-          HIST_SEASONS: ${{ github.event.inputs.hist_seasons || '2016,2017,2018,2019,2021,2022,2023' }}
+          HIST_SEASONS: ${{ github.event.inputs.hist_seasons || '2015,2016,2017,2018,2019,2020,2021,2022' }}
         run: |
           for y in $(echo "$HIST_SEASONS" | tr ',' ' '); do
             python -m mlb_predict collect \

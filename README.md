@@ -204,7 +204,13 @@ below) and an odds feed so ROI/CLV replaces breakeven accounting.
 5b. ✅ Full 2023 season ingested (2,430 games, exactly 162 per team,
    19 page-captured windows Mar 30 – Oct 1, validated + manifest-ed);
    second out-of-sample season (2024) backtested at full training depth;
-   2016–2022 via the same processor or the CI workflow;
+5c. 🔶 Backfill to the start of Statcast (2015): 2015 started (250 games,
+   Apr 5–24, via the season-generic `scripts/process_scores.py <season>`).
+   Missing: rest of 2015 (~24 windows) + 2016–2022 (~17k games). Fastest
+   path: copy `scripts/collect-upstream-data.workflow.yml` to
+   `.github/workflows/` and run it (hist_seasons default = 2015–2022), or
+   run the `collect` command per season on any machine with MLB egress;
+   page-capture continues at roughly one season per session;
    2016–2022 + full 2023 via the CI workflow once `scripts/
    collect-upstream-data.workflow.yml` is copied to `.github/workflows/`
 6. 🔶 Statcast pitcher quality features — pipeline landed & tested
