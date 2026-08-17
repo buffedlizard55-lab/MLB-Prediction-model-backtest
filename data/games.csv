@@ -1,4 +1,59 @@
 game_pk,season,official_date,game_date,game_type,away_team_id,away_team,away_score,home_team_id,home_team,home_score,home_win,total_runs,run_diff_home
+745444,2024,2024-03-20,2024-03-20,R,119,Los Angeles Dodgers,5,135,San Diego Padres,2,0,7,-3
+746175,2024,2024-03-21,2024-03-21,R,135,San Diego Padres,15,119,Los Angeles Dodgers,11,0,26,-4
+745039,2024,2024-03-28,2024-03-28,R,112,Chicago Cubs,3,140,Texas Rangers,4,1,7,1
+745116,2024,2024-03-28,2024-03-28,R,141,Toronto Blue Jays,8,139,Tampa Bay Rays,2,0,10,-6
+745283,2024,2024-03-28,2024-03-28,R,111,Boston Red Sox,6,136,Seattle Mariners,4,0,10,-2
+745445,2024,2024-03-28,2024-03-28,R,137,San Francisco Giants,4,135,San Diego Padres,6,1,10,2
+745687,2024,2024-03-28,2024-03-28,R,114,Cleveland Guardians,8,133,Athletics,0,0,8,-8
+746089,2024,2024-03-28,2024-03-28,R,134,Pittsburgh Pirates,6,146,Miami Marlins,5,0,11,-1
+746165,2024,2024-03-28,2024-03-28,R,138,St. Louis Cardinals,1,119,Los Angeles Dodgers,7,1,8,6
+746335,2024,2024-03-28,2024-03-28,R,142,Minnesota Twins,4,118,Kansas City Royals,1,0,5,-3
+746418,2024,2024-03-28,2024-03-28,R,147,New York Yankees,5,117,Houston Astros,4,0,9,-1
+746737,2024,2024-03-28,2024-03-28,R,120,Washington Nationals,2,113,Cincinnati Reds,8,1,10,6
+746821,2024,2024-03-28,2024-03-28,R,116,Detroit Tigers,1,145,Chicago White Sox,0,0,1,-1
+747060,2024,2024-03-28,2024-03-28,R,108,Los Angeles Angels,3,110,Baltimore Orioles,11,1,14,8
+747224,2024,2024-03-28,2024-03-28,R,115,Colorado Rockies,1,109,Arizona Diamondbacks,16,1,17,15
+745117,2024,2024-03-29,2024-03-29,R,141,Toronto Blue Jays,2,139,Tampa Bay Rays,8,1,10,6
+745276,2024,2024-03-29,2024-03-29,R,111,Boston Red Sox,0,136,Seattle Mariners,1,1,1,1
+745435,2024,2024-03-29,2024-03-29,R,137,San Francisco Giants,8,135,San Diego Padres,3,0,11,-5
+745604,2024,2024-03-29,2024-03-29,R,144,Atlanta Braves,9,143,Philadelphia Phillies,3,0,12,-6
+745682,2024,2024-03-29,2024-03-29,R,114,Cleveland Guardians,6,133,Athletics,4,0,10,-2
+745848,2024,2024-03-29,2024-03-29,R,158,Milwaukee Brewers,3,121,New York Mets,1,0,4,-2
+746091,2024,2024-03-29,2024-03-29,R,134,Pittsburgh Pirates,7,146,Miami Marlins,2,0,9,-5
+746167,2024,2024-03-29,2024-03-29,R,138,St. Louis Cardinals,3,119,Los Angeles Dodgers,6,1,9,3
+746412,2024,2024-03-29,2024-03-29,R,147,New York Yankees,7,117,Houston Astros,1,0,8,-6
+747223,2024,2024-03-29,2024-03-29,R,115,Colorado Rockies,3,109,Arizona Diamondbacks,7,1,10,4
+745037,2024,2024-03-30,2024-03-30,R,112,Chicago Cubs,2,140,Texas Rangers,11,1,13,9
+745119,2024,2024-03-30,2024-03-30,R,141,Toronto Blue Jays,1,139,Tampa Bay Rays,5,1,6,4
+745278,2024,2024-03-30,2024-03-30,R,111,Boston Red Sox,3,136,Seattle Mariners,4,1,7,1
+745436,2024,2024-03-30,2024-03-30,R,137,San Francisco Giants,9,135,San Diego Padres,6,0,15,-3
+745599,2024,2024-03-30,2024-03-30,R,144,Atlanta Braves,12,143,Philadelphia Phillies,4,0,16,-8
+745684,2024,2024-03-30,2024-03-30,R,114,Cleveland Guardians,12,133,Athletics,3,0,15,-9
+745850,2024,2024-03-30,2024-03-30,R,158,Milwaukee Brewers,7,121,New York Mets,6,0,13,-1
+746087,2024,2024-03-30,2024-03-30,R,134,Pittsburgh Pirates,9,146,Miami Marlins,3,0,12,-6
+746168,2024,2024-03-30,2024-03-30,R,138,St. Louis Cardinals,6,119,Los Angeles Dodgers,5,0,11,-1
+746333,2024,2024-03-30,2024-03-30,R,142,Minnesota Twins,5,118,Kansas City Royals,1,0,6,-4
+746410,2024,2024-03-30,2024-03-30,R,147,New York Yankees,5,117,Houston Astros,3,0,8,-2
+746736,2024,2024-03-30,2024-03-30,R,120,Washington Nationals,7,113,Cincinnati Reds,6,0,13,-1
+746818,2024,2024-03-30,2024-03-30,R,116,Detroit Tigers,7,145,Chicago White Sox,6,0,13,-1
+747063,2024,2024-03-30,2024-03-30,R,108,Los Angeles Angels,4,110,Baltimore Orioles,13,1,17,9
+747221,2024,2024-03-30,2024-03-30,R,115,Colorado Rockies,9,109,Arizona Diamondbacks,4,0,13,-5
+745035,2024,2024-03-31,2024-03-31,R,112,Chicago Cubs,9,140,Texas Rangers,5,0,14,-4
+745115,2024,2024-03-31,2024-03-31,R,141,Toronto Blue Jays,9,139,Tampa Bay Rays,2,0,11,-7
+745279,2024,2024-03-31,2024-03-31,R,111,Boston Red Sox,5,136,Seattle Mariners,1,0,6,-4
+745438,2024,2024-03-31,2024-03-31,R,137,San Francisco Giants,4,135,San Diego Padres,13,1,17,9
+745602,2024,2024-03-31,2024-03-31,R,144,Atlanta Braves,4,143,Philadelphia Phillies,5,1,9,1
+745683,2024,2024-03-31,2024-03-31,R,114,Cleveland Guardians,3,133,Athletics,4,1,7,1
+745845,2024,2024-03-31,2024-03-31,R,158,Milwaukee Brewers,4,121,New York Mets,1,0,5,-3
+746090,2024,2024-03-31,2024-03-31,R,134,Pittsburgh Pirates,9,146,Miami Marlins,7,0,16,-2
+746166,2024,2024-03-31,2024-03-31,R,138,St. Louis Cardinals,4,119,Los Angeles Dodgers,5,1,9,1
+746332,2024,2024-03-31,2024-03-31,R,142,Minnesota Twins,0,118,Kansas City Royals,11,1,11,11
+746413,2024,2024-03-31,2024-03-31,R,147,New York Yankees,4,117,Houston Astros,3,0,7,-1
+746739,2024,2024-03-31,2024-03-31,R,120,Washington Nationals,5,113,Cincinnati Reds,6,1,11,1
+746815,2024,2024-03-31,2024-03-31,R,116,Detroit Tigers,3,145,Chicago White Sox,2,0,5,-1
+747062,2024,2024-03-31,2024-03-31,R,108,Los Angeles Angels,4,110,Baltimore Orioles,1,0,5,-3
+747222,2024,2024-03-31,2024-03-31,R,115,Colorado Rockies,1,109,Arizona Diamondbacks,5,1,6,4
 778563,2025,2025-03-18,2025-03-18,R,119,Los Angeles Dodgers,4,112,Chicago Cubs,1,0,5,-3
 778564,2025,2025-03-19,2025-03-19,R,119,Los Angeles Dodgers,6,112,Chicago Cubs,3,0,9,-3
 778545,2025,2025-03-27,2025-03-27,R,144,Atlanta Braves,4,135,San Diego Padres,7,1,11,3
