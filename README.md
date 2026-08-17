@@ -114,33 +114,46 @@ average breakeven price.
 
 ## Latest results — 2025 full regular season (walk-forward, no lookahead)
 
-Dataset: **3,692 verified official games** (full 2024 season through Jun 30 +
-full 2025 season, all 30 teams), transcribed 1:1 from `statsapi.mlb.com`
-schedule responses with a provenance manifest. Backtest evaluates **2,430
-out-of-sample predictions** — every 2025 regular-season game.
+Dataset: **4,859 verified official games** — the **complete 2024 season
+(2,429 games; HOU and CLE at 161 because the Sep 29 game was rained out and
+never made up) plus the complete 2025 season (2,430 games)**, all 30 teams,
+transcribed 1:1 from `statsapi.mlb.com` schedule responses with a
+provenance manifest. Every team's game total was audited against the
+official per-team schedule endpoints. Backtest evaluates **2,430
+out-of-sample predictions** — every 2025 regular-season game — with a full
+two-year rolling training history at every refit.
 
 | Strategy | Accuracy | Brier | Log-loss | AUC |
 |---|---|---|---|---|
-| **Model (sim + selected features)** | **55.5%** | **0.2461** | 0.7229 | **0.5663** |
+| **Model (sim + selected features)** | **56.1%** | **0.2437** | **0.6801** | **0.5699** |
 | Always-home 50% | 54.3% | 0.2500 | 0.6931 | 0.5000 |
-| Simulator alone | 52.4% | 0.2559 | 0.7060 | 0.5513 |
-| Season win-pct favorite | 54.7% | 0.2469 | 0.6871 | 0.5557 |
+| Simulator alone | 52.0% | 0.2576 | 0.7097 | 0.5525 |
+| Season win-pct favorite | 55.1% | 0.2463 | 0.6859 | 0.5648 |
 
 **Selective play (the edge)** — bet only where the model is confident:
 
 | Edge threshold | Accuracy | Games | Coverage | Avg breakeven price |
 |---|---|---|---|---|
-| ≥ 0.03 | 57.1% | 1,820 | 74.9% | ~1.71 |
-| ≥ 0.06 | 59.4% | 1,234 | 50.8% | ~1.64 |
-| ≥ 0.10 | **61.4%** | 637 | 26.2% | ~1.57 |
+| ≥ 0.03 | 57.3% | 1,655 | 68.1% | ~1.73 |
+| ≥ 0.06 | 60.3% | 1,005 | 41.4% | ~1.67 |
+| ≥ 0.10 | **66.4%** | 455 | 18.7% | ~1.59 |
 
-Totals: MAE 3.67 runs, RMSE 5.66, O/U 8.5 hit 50.4% — the totals leg is the
-weakest and is the next improvement target.
+Totals: MAE 3.609 runs (naive recent-runs baseline 3.617), RMSE 4.583,
+O/U 8.5 hit 51.0% — the totals model now edges out the naive baseline.
 
-Adding 2024 training history lifted the selective ≥0.10 subset from
-57.8% → **61.4% accuracy**, and the raw model from 54.0% → 55.5% —
-confirming the multi-year-history roadmap item. Next accuracy lever:
-Statcast pitcher/batter features via the StatcastMLB harvester.
+Training-history ablation, all on the same 2,430 out-of-sample games:
+
+| Training history | Model acc | Selective ≥0.10 acc |
+|---|---|---|
+| 2025 season only (rolling) | 54.0% | 57.8% |
+| + 2024 first half | 55.5% | 61.4% |
+| **+ full 2024 season (current)** | **56.1%** | **66.4%** |
+
+At ≥0.10 edge the model is right 66.4% of the time on ~455 games/season
+while only needing ~63% (breakeven ~1.59) to profit at fair prices —
+the strongest signal in the project so far. Next accuracy levers:
+Statcast pitcher/batter features via the StatcastMLB harvester, and an
+odds feed so ROI/CLV can replace breakeven accounting.
 
 ## Roadmap
 
@@ -148,7 +161,8 @@ Statcast pitcher/batter features via the StatcastMLB harvester.
 2. ✅ Leak-free features, Monte Carlo simulator, selective filter, walk-forward backtester
 3. ✅ Full 2025 season ingested + backtested (2,430 games)
 4. ✅ 2024 first-half ingest → multi-year train history (lifted selective ≥0.10 to 61.4%)
-5. ⬜ 2024 second-half ingest (Jul–Sep) → full two-year history
+5. ✅ Full 2024 season ingest (2,429 games, audited per-team vs official schedules) →
+   full two-year history backtest: 56.1% overall, **66.4%** on the ≥0.10-edge subset
 6. ⬜ Statcast pitcher/batter quality features (via `vendor/StatcastMLB`)
 7. ⬜ Odds feed adapter → ROI/CLV evaluation instead of breakeven prices
 8. ⬜ Full PBP-derived features (run expectancy, bullpen load) via `vendor/MLB-PBP`
