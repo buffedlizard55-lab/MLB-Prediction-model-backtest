@@ -186,3 +186,5 @@ retrieved_utc,source_url,rows
 2026-08-17T21:36:17.426921+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-05-25&endDate=2015-06-03&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,139
 2026-08-17T21:38:39.072111+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-04&endDate=2015-06-13&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,132
 2026-08-17T21:38:40.239516+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-14&endDate=2015-06-23&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,139
+2026-08-17T21:41:10.390307+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-06-24&endDate=2015-07-03&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,136
+2026-08-17T21:41:11.496374+00:00,https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2015-07-04&endDate=2015-07-13&gameTypes=R&fields=dates,games,gamePk,officialDate,teams,away,home,team,id,score,126
